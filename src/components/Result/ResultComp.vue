@@ -1,7 +1,27 @@
 <script setup>
+import { ref } from "vue"
 const props = defineProps(["data"]);
-const data = props.data / 1000;
+const data = parseFloat(props.data / 1000).toFixed(1)
+
 console.log("result: ", data);
+
+const category = ref(null)
+
+if(data <= 18.5){
+  category.value = "Zayıf"
+}
+else if(data <= 24.9){
+  category.value = "Normal"
+}
+else if(data <= 29.9){
+  category.value = "Fazla kilolu"
+}
+else if(data <= 40){
+  category.value = "Obez"
+}else{
+  category.value = "Aşırı Obez"
+}
+
 </script>
 
 <template>
@@ -12,7 +32,7 @@ console.log("result: ", data);
     </div>
     <img src="../../assets/brackets.svg" />
     <div class="comment">
-      <p class="comment__content">Aşiri obez</p>
+      <p class="comment__content">{{ category }}</p>
     </div>
   </div>
 </template>

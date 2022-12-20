@@ -7,7 +7,7 @@ import CalculateComp from "./components/Calculate/CalculateComp.vue";
   <img class="ath" src="./assets/athleteman.svg" alt="" />
   <img class="bgc" src="./assets/athletemanBackground.svg" alt="" />
   <NavComp></NavComp>
-  <CalculateComp class="calculateComp"></CalculateComp>
+  <CalculateComp></CalculateComp>
 </template>
 
 <style scoped>
@@ -24,7 +24,7 @@ import CalculateComp from "./components/Calculate/CalculateComp.vue";
   z-index: 0;
 }
 
-.calculateComp {
+/* .calsculateComp {
   z-index: -2;
-}
+} */
 </style>

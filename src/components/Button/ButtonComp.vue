@@ -78,8 +78,8 @@ const dietHandler = () =>{
 .gender {
   display: flex;
   flex-direction: row;
-  margin-left: 250px;
-  gap: 50px;
+  margin-left: 190px;
+  gap: 75px;
 }
 
 .womanDesign {
