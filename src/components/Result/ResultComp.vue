@@ -1,13 +1,14 @@
 <script setup>
 import { ref } from "vue"
+
 const props = defineProps(["data"]);
-const data = parseFloat(props.data / 1000).toFixed(1)
+const data = parseFloat(props.data).toFixed(1)
+const category = ref(0)
 
-console.log("result: ", data);
-
-const category = ref(null)
-
-if(data <= 18.5){
+if(data == 0){
+  category.value = "Sonuç Sıfır Olmamalı!"
+}
+else if(data <= 18.5){
   category.value = "Zayıf"
 }
 else if(data <= 24.9){
@@ -18,10 +19,10 @@ else if(data <= 29.9){
 }
 else if(data <= 40){
   category.value = "Obez"
-}else{
+}
+else{
   category.value = "Aşırı Obez"
 }
-
 </script>
 
 <template>

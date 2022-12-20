@@ -12,10 +12,21 @@ const disabledCalc = ref(false);
 const data = ref();
 const showResult = ref();
 
-function calculateBMI(weight, height) {
-  const result = Math.round(weight / (100 / (height * height)));
-  data.value = result;
-  return result;
+function calculateBMI(height, weight) {
+  // const result = Math.round(weight / (100 / (height * height)));
+  // data.value = result;
+  // return result;
+
+  const dividedHeight = height / 100;
+
+  const  result = weight / (dividedHeight * dividedHeight);
+  if(isNaN(result) === true){
+    data.value = 0
+  }else{
+    data.value = result
+  }
+  
+  return result
 }
 
 const weightHandler = (e) => {

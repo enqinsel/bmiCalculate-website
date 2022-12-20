@@ -74,6 +74,23 @@ const dietHandler = () =>{
   color: rgb(255, 255, 255);
   background: linear-gradient(90deg, #f4743d 3.43%, #d6ed40 93.67%);
   border-radius: 6px;
+
+  animation: blinker 2s linear infinite;
+}
+.list:hover{
+  opacity: 100;
+  animation: blinker 2s;
+  cursor: pointer;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.list:hover{
+  opacity: 100;
 }
 .gender {
   display: flex;
