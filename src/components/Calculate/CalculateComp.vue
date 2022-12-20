@@ -13,9 +13,6 @@ const data = ref();
 const showResult = ref();
 
 function calculateBMI(height, weight) {
-  // const result = Math.round(weight / (100 / (height * height)));
-  // data.value = result;
-  // return result;
 
   const dividedHeight = height / 100;
 
