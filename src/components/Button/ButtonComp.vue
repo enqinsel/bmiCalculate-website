@@ -49,6 +49,7 @@ const dietHandler = () => {
 </template>
 
 <style scoped>
+
 .calc {
   position: absolute;
   left: 200px;
@@ -64,6 +65,7 @@ const dietHandler = () => {
   background: linear-gradient(90deg, #e2f6c7fb 3.43%, #b3f9d9 93.67%);
   cursor: pointer;
 }
+
 .calcAfter {
   position: absolute;
   top: 465px;
@@ -71,10 +73,16 @@ const dietHandler = () => {
   width: 150px;
   height: 50px;
   font-size: 20px;
-  color: rgb(0, 0, 0);
-  background: linear-gradient(90deg, #d9fda9 3.43%, #64feb8 93.67%);
+  color: rgb(255, 255, 255);
+  background: rgb(0, 49, 2);
   border-radius: 6px;
 }
+
+.calcAfter:hover{
+  background: rgb(0, 49, 2);
+  cursor: pointer;
+}
+
 .list {
   position: absolute;
   left: 300px;

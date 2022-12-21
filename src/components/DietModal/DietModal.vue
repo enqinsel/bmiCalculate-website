@@ -59,7 +59,6 @@ const closeHandler = () => {
 
 <style scoped lang="scss">
 
-
 .popup {
   position: fixed;
   z-index: 999;

@@ -11,10 +11,10 @@
       <div class="links">
         <ul>
             <li>
-                <a href="">BMI Hesapla</a>
+                <a href="#">BMI Hesapla</a>
             </li>
             <li>
-                <a href="">BMI Nedir</a>
+                <a href="#">BMI Nedir</a>
             </li>
         </ul>
       </div>
@@ -34,7 +34,6 @@
 
 .content{
     width: 150vh;
-    /* background: rgb(155, 208, 20); */
     padding: 1vh;
     display: flex;
     flex-direction: row;
