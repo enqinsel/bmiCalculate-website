@@ -1,7 +1,9 @@
-# Vue 3 + Vite
+## <div align="center"><a href="https://bmi-calculator-enqinsel.netlify.app/"><b>--> LIVE <--</b></a></div>
+![img](https://user-images.githubusercontent.com/76450122/208983083-201bfba5-993d-4145-a006-4c56e152ee22.jpg)
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+- Sayfa ilk açıldığında varsayılan olarak kullanıcının vücut kitle endeksini hesaplayacağı ekran gelir.
+Hesaplama yapıldıktan sonra ekrana BMI hesabı ve kullanıcı için diyet listesi görüntülenmektedir.
 
-## Recommended IDE Setup
+- 6 tane componentten oluşmaktadır ve 1 tane hook(onMounted) kullanılmıştır. Modal'a özel SCSS kullanılmıştır.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+- Geliştirilmeye müsait bir projedir. Şuan için versiyon 1 olarak adlandırılabilir.
