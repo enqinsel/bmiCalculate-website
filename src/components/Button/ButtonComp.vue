@@ -19,7 +19,6 @@ const dietHandler = () => {
 </script>
 
 <template>
-  <!-- Input Comp olarak ayır -->
   <div class="gender" v-if="props.showGender">
     <label class="rad-label">
       <input type="radio" class="manInput" name="gender" />

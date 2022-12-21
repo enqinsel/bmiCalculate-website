@@ -1,29 +1,3 @@
-<!-- <template>
-    <div class="container">
-        <div class="row">
-            <img src="../../assets/dietlist.jpg"/>
-            <img src="../../assets/dietlist.jpg"/>
-        </div>
-    </div>
-</template> -->
-
-<!--<style scoped>
-
-.container{
-    position: fixed;
-    width: 300px;
-    height: 300px;
-    background-color: yellow;
-}
-
-
-/* img{
-    position: fixed;
-    width: 300px;
-    height: 300px;
-} */
-</style> -->
-
 <script setup>
 const emits = defineEmits(["show"]);
 const closeHandler = () => {

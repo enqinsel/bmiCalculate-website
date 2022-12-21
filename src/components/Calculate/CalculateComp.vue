@@ -125,7 +125,6 @@ const closeHandler = () => {
 .content {
   width: 150vh;
   height: auto;
-  /* background: rgba(225, 255, 0, 0.655); */
 }
 
 .row {
@@ -136,14 +135,12 @@ const closeHandler = () => {
 
 .calc {
   width: 100vh;
-  /* background: rgb(87, 198, 19); */
   padding: 1vh;
 }
 
 .height {
   display: grid;
   grid-template-columns: repeat(1 1fr);
-  /* background-color: aqua; */
 }
 
 .stick {
