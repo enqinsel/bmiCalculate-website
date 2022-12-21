@@ -2,6 +2,7 @@
 import ButtonComp from "../Button/ButtonComp.vue";
 import { ref } from "vue";
 import ResultComp from "../Result/ResultComp.vue";
+import DietModal from "../DietModal/dietModal.vue";
 
 const rangeWeight = ref(0);
 const marginWeight = ref(null);
@@ -11,6 +12,7 @@ const showDiet = ref(false);
 const disabledCalc = ref(false);
 const data = ref();
 const showResult = ref();
+const showDietList = ref(false)
 
 function calculateBMI(height, weight) {
 
@@ -44,8 +46,12 @@ const calcHandler = () => {
 };
 
 const dietHandler = () => {
-  console.log("asdf");
+  showDietList.value = true
 };
+
+const closeHandler = () => {
+  showDietList.value = false
+}
 </script>
 
 <template>
@@ -105,6 +111,7 @@ const dietHandler = () => {
     </div>
   </div>
       <ResultComp class="resultComp" v-if="showResult" :data="data"></ResultComp>
+      <DietModal v-if="showDietList" @show="closeHandler"></DietModal>
 </template>
 
 <style scoped>

@@ -1,19 +1,21 @@
 <script setup>
-import { ref } from "vue"
+import { ref } from "vue";
 
 const props = defineProps(["showGender", "showOtherButtons", "showDiet", "disable"]);
-const emits = defineEmits(["calcHandler", "dietHandler"])
+const emits = defineEmits(["calcHandler", "dietHandler"]);
 
-const calcAfter = ref(null)
+const calcAfter = ref(null);
 
 const calculateHandler = () => {
-  emits("calcHandler")
-  calcAfter.value = "calcAfter"
-}
+  emits("calcHandler");
+  calcAfter.value = "calcAfter";
+};
 
-const dietHandler = () =>{
-  emits("dietHandler")
-}
+const dietHandler = () => {
+  emits("dietHandler");
+};
+
+
 </script>
 
 <template>
@@ -31,14 +33,22 @@ const dietHandler = () =>{
   </div>
 
   <div class="otherButton" v-if="props.showOtherButtons">
-    <button @click="calculateHandler" class="calc" :class="calcAfter" :disabled="props.disable">HESAPLA</button>
-    <button @click="dietHandler" v-if="props.showDiet" class="list">Diyet Listesini Gör</button>
+    <button
+      @click="calculateHandler"
+      class="calc"
+      :class="calcAfter"
+      :disabled="props.disable"
+    >
+      HESAPLA
+    </button>
+    <button @click="dietHandler" v-if="props.showDiet" class="list">
+      Diyet Listesini Gör
+    </button>
+    
   </div>
 </template>
 
 <style scoped>
-
-
 .calc {
   position: absolute;
   left: 200px;
@@ -50,11 +60,11 @@ const dietHandler = () =>{
   border-radius: 6px;
 }
 
-.calc:hover{
+.calc:hover {
   background: linear-gradient(90deg, #e2f6c7fb 3.43%, #b3f9d9 93.67%);
   cursor: pointer;
 }
-.calcAfter{
+.calcAfter {
   position: absolute;
   top: 465px;
   left: 80px;
@@ -65,7 +75,7 @@ const dietHandler = () =>{
   background: linear-gradient(90deg, #d9fda9 3.43%, #64feb8 93.67%);
   border-radius: 6px;
 }
-.list{
+.list {
   position: absolute;
   left: 300px;
   width: 275px;
@@ -77,21 +87,18 @@ const dietHandler = () =>{
 
   animation: blinker 2s linear infinite;
 }
-.list:hover{
+.list:hover {
   opacity: 100;
   animation: blinker 2s;
   cursor: pointer;
 }
 
 @keyframes blinker {
-    50% {
-        opacity: 0;
-    }
+  50% {
+    opacity: 0;
+  }
 }
 
-.list:hover{
-  opacity: 100;
-}
 .gender {
   display: flex;
   flex-direction: row;

@@ -3,10 +3,8 @@ import { onMounted, ref } from "vue";
 import NavComp from "./components/Navbar/NavComp.vue";
 import CalculateComp from "./components/Calculate/CalculateComp.vue";
 
-const afterStyle = ref();
+
 const rightItem = ref();
-
-
 
 onMounted(() => {
   setInterval(function () {
